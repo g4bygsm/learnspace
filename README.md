@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### _CODE LEARN THRIVE_
 
-## Getting Started
+---
 
-First, run the development server:
+     "Scopul acestui website, este de a-i ajuta pe utilizatorii acestuia să învețe limbaje de programare de la 0."
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Comenzi NPM
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pentru a host website-ul local, rulați `npm run dev` în terminal.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+# Tehnologii utilizate
 
-To learn more about Next.js, take a look at the following resources:
+- [_Next.js 13_](https://nextjs.org/)
+- [_Google Firebase_](https://firebase.google.com/)
+- [\_Shadcn UI](https://ui.shadcn.com/)
+- [_Tailwind CSS_](https://tailwindcss.com/)
+- [\_TypeScript](https://www.typescriptlang.org/)
+- [_Jotai_](https://jotai.org/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Componente Externe
 
-## Deploy on Vercel
+- ## **TypeWriter**
+- ## Code Mirror
+- ## Shadcn UI
+  - **Accordion**
+  - **Aspect-ratio**
+  - **Avatar**
+  - **Button**
+  - **Card**
+  - **Carousel**
+  - **Colapsible**
+  - **Input**
+  - **Label**
+  - **Navigation Menu**
+  - **Pagination**
+  - **Progress**
+  - **Radio Group**
+  - **Select**
+  - **Sheet**
+  - **Tabs**
+  - **Text Area**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Componente Proprii
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Header**
+- **Footer**
+- **ChatBotBtn**
+
+---
+
+# Caracteristici
+
+- `Autentificare cu Google`
+- `Chatbot AI - în dezvoltare`
+- `Cursuri Limbaje de programare`
+- `Certificat de validare la finalul fiecărui curs - în dezvoltare`
+
+---
+
+# Cursuri
+
+Fiecare curs, este structurat pe capitole reprezentative, care la rândul lor sunt împărțite în două:
+
+- `Partea teoretică` - care conține strict definiții, exemple, și explicații ;
+- `Partea practică` - structurată sub formă de quiz, unde se verifică cunoștințele cu privire la  
+   capitolul respectiv
+
+### Cursuri disponibile:
+
+- `The HTML Basic Guide for beginners`
+- `The CSS - Cascading Style Sheet course for beginners`
+- `JavaScript Beginner's Guide`
+- `The Native React Course for beginners`
+- `The Tailwind Styling Course for beginners`
+- `Next.JS React Component Beginner's Guide`
+- `The PHP`
+- `Design Tips`
+
+---
