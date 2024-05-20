@@ -14,7 +14,7 @@ import { Chatbotbtn } from "@/components/Chatbotbtn";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { cn } from "@/lib/utils";
-import { sHtmlEAtom } from "@/lib/atoms";
+import { sHtmlBAtom } from "@/lib/atoms";
 import {
   Carousel,
   CarouselContent,
@@ -38,7 +38,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
 export default function Contentpractice() {
   const [showFinalResult, setFinalResults] = useState(false);
   const audioPlayer = useRef<HTMLAudioElement>();
-  const [score, setScore] = useAtom(sHtmlEAtom);
+  const [score, setScore] = useAtom(sHtmlBAtom);
   const [pass, setPass] = useState(false);
   const [intr1, setIntr1] = useState("");
   const [intr2, setIntr2] = useState("");
