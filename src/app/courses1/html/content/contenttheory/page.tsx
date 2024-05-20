@@ -96,10 +96,10 @@ export default function Contenttheory() {
               </div>
             </div>
             <div>
-              <div className=" w-[500px] h-[700px] bg-white mt-10 rounded-3xl text-center font-bold text-3xl">
+              <div className=" w-[500px] h-[900px] bg-white mt-10 rounded-3xl text-center font-bold text-3xl">
                 <div className="pt-5 pb-5">Images</div>
                 <div className="flex justify-center">
-                  <div className="w-[480px] h-[600px] bg-gray-300 rounded-3xl mt-4">
+                  <div className="w-[480px] h-[800px] bg-gray-300 rounded-3xl mt-4">
                     <div className="flex justify-center">
                       <Image src={htmllogo} className="w-64 mt-10" />
                     </div>
@@ -119,7 +119,7 @@ export default function Contenttheory() {
                           </div>
                           <div className="flex items-center justify-center">
                             <div className="rounded-md border border-black font-light bg-white px-4 py-2 font-mono text-sm shadow-sm ">
-                              &lt;img src"url" alt="alternateText"&gt;
+                              &lt;img src="url" alt="alternateText"&gt;
                             </div>
                           </div>
                         </div>
@@ -133,6 +133,23 @@ export default function Contenttheory() {
                         <div className="font-bold">alt</div> - this field is for
                         adding a text, instead of the image, if the image isn't
                         loaded; you can leave the field empty
+                      </div>
+                    </div>
+                    <div className="">
+                      <div className="text-start space-x-4 px-4 pt-8 w-full">
+                        <h4 className="text-lg font-semibold  ">
+                          How to add audio/videos in HTML:
+                        </h4>
+                        <div className=" text-sm"></div>
+                      </div>
+                      <div className="flex-col flex items-center justify-center">
+                        <div className=" m-2  rounded-md border border-black font-light bg-white px-4 py-2 font-mono text-sm shadow-sm ">
+                          &lt;audio controls&gt;<br></br> &lt;source
+                          src="url"&gt;<br></br> &lt;audio controls&gt;
+                        </div>
+                        <div className="rounded-md border border-black font-light bg-white px-4 py-2 font-mono text-sm shadow-sm ">
+                          &lt;video src="url"&gt;
+                        </div>
                       </div>
                     </div>
                   </div>

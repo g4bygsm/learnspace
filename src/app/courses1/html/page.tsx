@@ -33,15 +33,25 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
 export default function Htmlmenu() {
   const [name1, setName1] = useAtom(name);
   const [surname1, setSurname1] = useAtom(surname);
-  const [c1, _] = useAtom(sHtmlBAtom);
-  const c2 = 100;
-  const c3 = 100;
-  const c4 = 100;
+  const [c1] = useAtom(sHtmlBAtom);
+  const [c2] = useAtom(sHtmlCAtom);
+  const [c3] = useAtom(sHtmlEAtom);
+  const [c4] = useAtom(sHtmlLAtom);
   const [html, setHtml] = useAtom(htmlP);
   const totalProgress = c1 + c2 + c3 + c4;
   const main = Math.floor((totalProgress / 400) * 100);
   const [pass, setPass] = useState(false);
   const [showCertificate, setShowCertificate] = useState(false);
+
+  function getDate() {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const year = today.getFullYear();
+    const date = today.getDate();
+    return `${month}/${date}/${year}`;
+  }
+
+  const [currentDate, setCurrentDate] = useState(getDate());
 
   const isPass = () => {
     if (main != 100) {
@@ -62,8 +72,8 @@ export default function Htmlmenu() {
     const opt = {
       margin: 0,
       filename: "certificate.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2 },
+      image: { type: "svg", quality: 0.98 },
+      html2canvas: { scale: 1 },
       jsPDF: { unit: "in", format: "A4", orientation: "landscape" },
     };
     html2pdf().from(slidesRef.current).set(opt).save();
@@ -224,27 +234,27 @@ export default function Htmlmenu() {
       <Footer></Footer>
       <div className="hidden">
         <div ref={slidesRef} className=" bg-white h-[1080px] w-full">
-          <div className="flex justify-center pt-10">
-            <Image src={mainlogo} alt="" className=" w-12" />
-            <div className=" flex items-center text-gray-900 text-5xl font-bold pl-10">
+          <div className="flex justify-center pt-2">
+            <Image src={mainlogo} alt="" className=" w-8" />
+            <div className=" flex items-center text-gray-900 text-3xl font-bold pl-2">
               LearnSpace
             </div>
           </div>
-          <div className="mt-6 grid grid-cols-3 items-center text-gray-400">
+          <div className="mt-3 grid grid-cols-3 items-center text-gray-400">
             <hr className="border-gray-400" />
-            <p className="text-center text-[15px]">
+            <p className="text-center text-[10px]">
               L E A R N S P A C E <br></br> C E R T I F I C A T E
             </p>
             <hr className="border-gray-400" />
           </div>
-          <div className=" text-6xl font-bold text-center mt-10 text-gray-900">
+          <div className=" text-4xl font-bold text-center mt-10 text-gray-900">
             Certificate of Completion
           </div>
-          <div className=" text-center text-2xl m-10">This is to certify</div>
+          <div className=" text-center text-xl m-3">This is to certify</div>
           <div className=" text-5xl italic text-center">
             {surname1} {name1}
           </div>
-          <div className=" text-center text-2xl m-10">
+          <div className=" text-center text-xl m-10">
             for completing <b>The HTML Basic Guide for Begginers</b> on
             learnspace.com
           </div>
@@ -253,7 +263,7 @@ export default function Htmlmenu() {
           </div>
           <div className=" flex justify-center gap-[600px]">
             <div className=" text-start ml-20 text-2xl">
-              Date : <b>30/04/2024</b>
+              Date : <b>{currentDate}</b>
             </div>
             <div className=" text-end mr-20 text-2xl">
               Greetings from creator of LearnSpace,<br></br>{" "}

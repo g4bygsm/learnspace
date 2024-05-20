@@ -7,7 +7,7 @@ import { Poppins } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Chatbotbtn } from "@/components/Chatbotbtn";
-import htmllogo from "/public/htmllogo.svg";
+import mainlogo from "/public/mainlogo.png";
 import { Htmlmenu } from "@/components/Htmlmenu";
 import { Mirror } from "@/components/Mirror";
 import * as React from "react";
@@ -20,17 +20,18 @@ import {
 } from "@/components/ui/collapsible";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
-const code1 = `
-<!DOCTYPE html>
+const code1 = `<!DOCTYPE html>
+  <html lang="en">
   <html>
     <head>  
-      <h1>Title</h1>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale="1.0">
+      <title>Document</title>
     </head>
     <body>
-      <p>Lorem Ipsum</p>
     </body>
-  </html>
-`;
+  </html>`;
 
 console.log(code1);
 
@@ -49,104 +50,50 @@ export default function Basictheory() {
               className="w-[1200px] mt-24 rounded-[100px]"
             />
             <div className=" font-bold text-7xl text-white text-center p-10">
-              BASIC
+              LINKS/TAGS
             </div>
           </div>
         </div>
         <div className="flex justify-between ml-24 mr-24 ">
           <div>
-            <div className=" w-[500px] h-[300px] text-3xl font-bold bg-white text-gray-900 text-center rounded-3xl pt-5">
-              What means www?
+            <div className=" w-[700px] h-[700px] text-3xl font-bold bg-white text-gray-900 text-center rounded-3xl pt-5">
+              Example
               <div className="flex items-center justify-center pt-5 ">
-                <div className="w-[480px] h-[215px] font-light text-lg bg-gray-300 text-gray-900 rounded-3xl pt-5 pl-5 pr-5">
-                  <div className=" font-bold text-2xl">WWW</div> is defined as
-                  World Wide Web
-                  <div className=" text-base mt-5 ">
-                    This refers to all the public websites or pages that users
-                    can access on their local computers and other devices
-                    through the internet.
+                <div className="w-[680px] h-[615px] font-light text-lg bg-gray-300 text-gray-900 rounded-3xl pt-5 pl-5 pr-5">
+                  <div className=" font-bold text-sm text-start">
+                    <Mirror initialCode={code1} height="250px"></Mirror>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className=" w-[500px] h-[550px] bg-white mt-10 rounded-3xl text-center font-bold text-3xl">
-                <div className="pt-5 pb-5">Tags</div>
-                <div className="flex justify-center">
-                  <div className="w-[480px] h-[450px] bg-gray-300 rounded-3xl mt-4">
-                    <div className=" flex items-center justify-center text-center">
-                      <div className=" text-9xl ">
-                        {" "}
-                        &lt;&gt;{" "}
-                        <div className=" text-4xl font-light mt-5">
-                          {" "}
-                          OPENING TAG
-                        </div>
-                      </div>
+                  <div className=" flex flex-col items-center mt-10 text-sm">
+                    <div className=" ">
+                      <div className="font-bold">&lt;!DOCTYPE html&gt;</div>
+                      is an instruction about the version of HTML
                     </div>
-                    <div className="mt-10 flex items-center justify-center text-center">
-                      <div className=" text-9xl ">
-                        {" "}
-                        &lt;/&gt;{" "}
-                        <div className=" text-4xl font-light mt-5">
-                          {" "}
-                          CLOSING TAG
-                        </div>
-                      </div>
+                    <div className="mt-2 ">
+                      <div className="font-bold">&lt;html lang="en"&gt;</div>
+                      specifies the language of the element's content
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className=" w-[500px] h-[550px] bg-white mt-10 mb-10 rounded-3xl text-center font-bold text-3xl">
-                <div className="pt-5 pb-5">What means div?</div>
-                <div className="flex justify-center">
-                  <div className="w-[480px] h-[450px] bg-gray-300 rounded-3xl mt-4">
-                    <div className=" font-light text-base ml-5 mr-5 mt-5 flex text-start ">
-                      <div className=" font-bold"> DIV </div> - means a section
-                      from a web page, that allows you to add more proprieties
-                      for styling or layout.
-                    </div>
-                    <Collapsible
-                      open={isOpen}
-                      onOpenChange={setIsOpen}
-                      className="w-full space-y-2"
-                    >
-                      <div className="">
-                        <div className="text-start space-x-4 px-4 pt-2 w-full">
-                          <CollapsibleTrigger asChild></CollapsibleTrigger>
-                        </div>
-                        <div className=" mt-4 text-center mb-5">EXAMPLE</div>
-                        <div className="flex items-center justify-center ml-5 ">
-                          <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
-                            &lt; div&gt; section &lt;/div&gt;
-                          </div>
-                        </div>
-                        <div className=" text-base mt-2"></div>
+                    <div className=" mt-2 ">
+                      <div className="font-bold">
+                        &lt;meta charset="UTF-8"&gt;
                       </div>
-                    </Collapsible>
-                    <div className=" flex text-base ml-5 mr-5 font-light text-start mt-10">
-                      <div className=" font-bold"> Break </div> - is the element
-                      that produces a line break in text. It is usefull where
-                      the division of lines is significant.
+                      tells the browser to use the utf-8 character encoding
                     </div>
-                    <Collapsible
-                      open={isOpen}
-                      onOpenChange={setIsOpen}
-                      className="w-full space-y-2"
-                    >
-                      <div className="">
-                        <div className="text-start space-x-4 px-4 pt-2 w-full">
-                          <CollapsibleTrigger asChild></CollapsibleTrigger>
-                        </div>
-                        <div className=" mt-4 text-center mb-5">EXAMPLE</div>
-                        <div className="flex items-center justify-center ml-5 ">
-                          <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
-                            &lt;br&gt;
-                          </div>
-                        </div>
-                        <div className=" text-base mt-2"></div>
+                    <div className="mt-2 ">
+                      <div className="font-bold">
+                        &lt;meta http-equiv="X-UA-Compatible"
+                        content="IE=edge"&gt;
                       </div>
-                    </Collapsible>
+                      ensures that IE uses the latest available rendering engine
+                      to render a web page
+                    </div>
+                    <div className=" mt-2">
+                      <div className="font-bold">
+                        &lt;meta name="viewport" content="width=device-width,
+                        initial-scale="1.0"&gt;
+                      </div>
+                      sets the initial zoom level when the page is first loaded
+                      by the browser
+                    </div>
                   </div>
                 </div>
               </div>
@@ -154,16 +101,11 @@ export default function Basictheory() {
           </div>
 
           <div>
-            <div className=" w-[700px] h-[365px] bg-white rounded-3xl text-center text-3xl font-bold pt-5">
-              What is HTML?
+            <div className=" w-[500px] h-[335px] bg-white rounded-3xl text-center text-3xl font-bold pt-5">
+              How to add an icon
               <div className="flex justify-center ">
-                <div className=" pt-5 w-[680px] h-[287px] font-light bg-gray-300 text-lg mt-3 rounded-2xl">
-                  <div className=" font-bold text-2xl">HTML</div> is defined as
-                  HyperText Markup Language
-                  <div className=" text-base mt-5 font-light">
-                    This is a programing language, that we use for web pages,
-                    apps or another programs, and it's made for fronted.
-                  </div>
+                <div className="flex flex-col items-center pt-5 w-[480px] h-[257px] font-light bg-gray-300 text-lg mt-3 rounded-2xl">
+                  <Image src={mainlogo} alt="" className=" w-20" />
                   <Collapsible
                     open={isOpen}
                     onOpenChange={setIsOpen}
@@ -173,51 +115,65 @@ export default function Basictheory() {
                       <div className="text-start space-x-4 px-4 pt-2 w-full">
                         <CollapsibleTrigger asChild></CollapsibleTrigger>
                       </div>
-                      <div className="flex items-center justify-center ml-5 mt-6">
+                      <div className="flex items-center justify-center ml-5 ">
                         <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
-                          &lt; !DOCTYPE html&gt;
+                          &lt;link rel="icon" href="url"
+                          type="image/x-icon"/&gt;
                         </div>
                       </div>
-                      <div className=" text-base mt-2">
-                        This is the first tag in every HTML file.
+                      <div className=" text-base mt-2 flex justify-center">
+                        Replace
+                        <div className=" font-bold mr-1 ml-1"> url </div> with
+                        file location of your icon.
                       </div>
                     </div>
                   </Collapsible>
                 </div>
               </div>
             </div>
-            <div className="bg-white mb-10 w-[700px] h-[1070px] rounded-3xl mt-10 text-3xl font-bold text-center pt-6">
-              HTML Structure
+            <div className="bg-white mb-10 w-[500px] h-[325px] rounded-3xl mt-10 text-3xl font-bold text-center pt-6">
+              How to link script & style
               <div className="flex justify-center items-center">
-                <div className="bg-gray-300 w-[680px] h-[975px] mt-6 rounded-3xl text-start ">
-                  <div className=" flex justify-center mt-10">
+                <div className="bg-gray-300 w-[480px] h-[230px] mt-6 rounded-3xl text-start ">
+                  <div className=" flex justify-center mt-2">
                     <div className="w-96 h-86 text-sm">
-                      <Mirror initialCode={code1}></Mirror>
-                      <div className="font-bold text-center mt-5 text-xl">
-                        Explication
+                      <div className=" text-center text-2xl">
+                        {" "}
+                        Script - JavaScript
                       </div>
-
-                      {/* CONTENT */}
-
-                      <div>
-                        <div className=" mt-5">
-                          {" "}
-                          &lt;!DOCTYPE html&gt; - is the tag that is in every
-                          html document and represents the type of document
+                      <Collapsible
+                        open={isOpen}
+                        onOpenChange={setIsOpen}
+                        className="w-full space-y-2"
+                      >
+                        <div className="">
+                          <div className="text-start space-x-4 px-4 pt-2 w-full">
+                            <CollapsibleTrigger asChild></CollapsibleTrigger>
+                          </div>
+                          <div className="flex items-center justify-center ml-5 ">
+                            <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
+                              &lt;script src="url.js"&gt;&lt;/script&gt;
+                            </div>
+                          </div>
                         </div>
-                        <div className=" mt-5">
-                          &lt;html&gt; - is the opening tag for the HTML
-                          document and it includes the content of the document
+                      </Collapsible>
+                      <div className=" text-center text-2xl"> Style - CSS</div>
+                      <Collapsible
+                        open={isOpen}
+                        onOpenChange={setIsOpen}
+                        className="w-full space-y-2"
+                      >
+                        <div className="">
+                          <div className="text-start space-x-4 px-4 pt-2 w-full">
+                            <CollapsibleTrigger asChild></CollapsibleTrigger>
+                          </div>
+                          <div className="flex items-center justify-center ml-5 ">
+                            <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
+                              &lt;link rel="stylesheet" href="url.css"&gt;
+                            </div>
+                          </div>
                         </div>
-                        <div className=" mt-5">
-                          &lt;head&gt; - the header of the document (the top
-                          part)
-                        </div>
-                        <div className=" mt-5">
-                          &lt;body&gt; - is the "body" of the document and it
-                          includes most of the content
-                        </div>
-                      </div>
+                      </Collapsible>
                     </div>
                   </div>
                 </div>

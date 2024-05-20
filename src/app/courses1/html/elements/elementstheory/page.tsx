@@ -28,6 +28,11 @@ const code2 = `<body>
     <label>Password</label><br>
     <input type="password"><br>
 </body>`;
+const code3 = `<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>`;
 
 export default function Basictheory() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -168,14 +173,14 @@ export default function Basictheory() {
               </div>
             </div>
             <div>
-              <div className=" w-[700px] h-[550px] bg-white mt-10 mb-10 rounded-3xl text-center font-bold text-3xl">
-                <div className="pt-5 pb-5">What means div?</div>
+              <div className=" w-[700px] h-[250px] bg-white mt-10 mb-10 rounded-3xl text-center font-bold text-3xl">
+                <div className="pt-5 pb-5">Span</div>
                 <div className="flex justify-center">
-                  <div className="w-[680px] h-[450px] bg-gray-300 rounded-3xl mt-4">
-                    <div className=" font-light text-base ml-5 mr-5 mt-5 flex text-start ">
-                      <div className=" font-bold"> DIV </div> - means a section
-                      from a web page, that allows you to add more proprieties
-                      for styling or layout.
+                  <div className="w-[680px] h-[150px] bg-gray-300 rounded-3xl mt-4">
+                    <div className=" text-base font-light flex justify-center mt-7 m-3">
+                      <div className="font-bold">&lt;span&gt;</div> - is an
+                      inline container used to mark up a part of a text, or a
+                      part of a document.
                     </div>
                     <Collapsible
                       open={isOpen}
@@ -186,36 +191,12 @@ export default function Basictheory() {
                         <div className="text-start space-x-4 px-4 pt-2 w-full">
                           <CollapsibleTrigger asChild></CollapsibleTrigger>
                         </div>
-                        <div className=" mt-4 text-center mb-5">EXAMPLE</div>
-                        <div className="flex items-center justify-center ml-5 ">
+                        <div className="flex items-center justify-center ml-5">
                           <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
-                            &lt; div&gt; section &lt;/div&gt;
+                            &lt;p&gt;The pen is&lt;span
+                            style="color:blue"&gt;blue&lt;/span&gt;&lt;/p&gt;
                           </div>
                         </div>
-                        <div className=" text-base mt-2"></div>
-                      </div>
-                    </Collapsible>
-                    <div className=" flex text-base ml-5 mr-5 font-light text-start mt-10">
-                      <div className=" font-bold"> Break </div> - is the element
-                      that produces a line break in text. It is usefull where
-                      the division of lines is significant.
-                    </div>
-                    <Collapsible
-                      open={isOpen}
-                      onOpenChange={setIsOpen}
-                      className="w-full space-y-2"
-                    >
-                      <div className="">
-                        <div className="text-start space-x-4 px-4 pt-2 w-full">
-                          <CollapsibleTrigger asChild></CollapsibleTrigger>
-                        </div>
-                        <div className=" mt-4 text-center mb-5">EXAMPLE</div>
-                        <div className="flex items-center justify-center ml-5 ">
-                          <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
-                            &lt;br&gt;
-                          </div>
-                        </div>
-                        <div className=" text-base mt-2"></div>
                       </div>
                     </Collapsible>
                   </div>
@@ -259,36 +240,79 @@ export default function Basictheory() {
                 </div>
               </div>
             </div>
-            <div className="bg-white mb-10 w-[500px] h-[1070px] rounded-3xl mt-10 text-3xl font-bold text-center pt-6">
-              HTML Structure
+            <div className="bg-white mb-10 w-[500px] h-[345px] rounded-3xl mt-10 text-3xl font-bold text-center pt-6">
+              Hyperlinks
               <div className="flex justify-center items-center">
-                <div className="bg-gray-300 w-[480px] h-[975px] mt-6 rounded-3xl text-start ">
+                <div className="bg-gray-300 w-[480px] h-[250px] mt-6 rounded-3xl text-start ">
                   <div className=" flex justify-center mt-10">
                     <div className="w-96 h-86 text-sm">
-                      <Mirror initialCode={code2}></Mirror>
-                      <div className="font-bold text-center mt-5 text-xl">
-                        Explication
-                      </div>
-
                       {/* CONTENT */}
-
-                      <div>
-                        <div className=" mt-5">
-                          {" "}
-                          &lt;!DOCTYPE html&gt; - is the tag that is in every
-                          html document and represents the type of document
+                      <div className=" text-base font-light flex">
+                        <div className="font-bold">Hyperlink </div> - also known
+                        as link or web link, it contains an adress and acts as a
+                        reference to data.
+                      </div>
+                      <Collapsible
+                        open={isOpen}
+                        onOpenChange={setIsOpen}
+                        className="w-full space-y-2"
+                      >
+                        <div className="">
+                          <div className="text-start space-x-4 px-4 pt-2 w-full">
+                            <CollapsibleTrigger asChild></CollapsibleTrigger>
+                          </div>
+                          <div className="flex items-center justify-center ml-5">
+                            <div className="rounded-md border font-light  border-black bg-white px-4 py-2 font-mono text-sm shadow-sm ">
+                              &lt;a href="url"&gt;Text&lt;/a&gt;
+                            </div>
+                          </div>
+                          <div className=" flex justify-center m-6">
+                            <a
+                              href="http://localhost:3000"
+                              className="text-blue-800 underline"
+                            >
+                              Hyperlink
+                            </a>
+                          </div>
                         </div>
-                        <div className=" mt-5">
-                          &lt;html&gt; - is the opening tag for the HTML
-                          document and it includes the content of the document
+                      </Collapsible>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white mb-10 w-[500px] h-[495px] rounded-3xl mt-10 text-3xl font-bold text-center pt-6">
+              Lists
+              <div className="flex justify-center items-center">
+                <div className="bg-gray-300 w-[480px] h-[400px] mt-6 rounded-3xl text-start ">
+                  <div className=" flex justify-center mt-10">
+                    <div className="w-96 h-86 text-sm">
+                      <Mirror initialCode={code3} height="110px"></Mirror>
+                      <div className="flex flex-col font-light items-center mt-3">
+                        <div className="flex">
+                          <div className="font-bold">&lt;ul&gt;</div> - defines
+                          an unordered list
                         </div>
-                        <div className=" mt-5">
-                          &lt;head&gt; - the header of the document (the top
-                          part)
+                        <div className="flex text-center">
+                          You need to use the &lt;ul&gt; tag togheter with the
+                          &lt;li&gt; tag
                         </div>
-                        <div className=" mt-5">
-                          &lt;body&gt; - is the "body" of the document and it
-                          includes most of the content
+                        <div className="flex">
+                          <div className="font-bold">&lt;li&gt;</div> - defines
+                          an item from the list
+                        </div>
+                        <div className="flex">
+                          <div className="font-bold">&lt;ol&gt;</div> - defines
+                          an ordered list(numbered)
+                        </div>
+                        <div className="flex text-lg m-2">
+                          <div className="font-bold">List Styles</div>
+                        </div>
+                        <div className="flex flex-col">
+                          <div className="font-light">type="none"</div>
+                          <div className="font-light">type="circle"</div>
+                          <div className="font-light">type="disc"</div>
+                          <div className="font-light">type="square"</div>
                         </div>
                       </div>
                     </div>

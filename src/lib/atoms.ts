@@ -20,7 +20,7 @@ export const sCssTAtom = atomWithStorage("sCssTAtom", 100);
 export const cssP = atomWithStorage("cssP",0);
 
 // continue buttons
-export const astart1 = atomWithStorage("start1", "Start");
+export const hstart1 = atomWithStorage("start1", "Start");
 export const hstart2 = atomWithStorage("start2", "Start");
 export const hstart3 = atomWithStorage("start3", "Start");
 export const hstart4 = atomWithStorage("start4", "Start");

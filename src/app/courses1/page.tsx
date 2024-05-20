@@ -25,7 +25,7 @@ import { Progress } from "@/components/ui/progress";
 import { Poppins } from "next/font/google";
 
 import { useAtom } from "jotai";
-import { astart1 } from "@/lib/atoms";
+import { hstart1 } from "@/lib/atoms";
 import { hstart2 } from "@/lib/atoms";
 import { hstart3 } from "@/lib/atoms";
 import { hstart4 } from "@/lib/atoms";
@@ -58,7 +58,7 @@ import {
 const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
 
 export default function Courses1() {
-  const [start, setStart1] = useAtom(astart1);
+  const [start, setStart1] = useAtom(hstart1);
   const ifstart1 = () => {
     setStart1("Continue");
   };
@@ -160,7 +160,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={jsCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-6 w-72">
                       JavaScript Beginner's Guide 
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -275,7 +275,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={htmlCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-14 w-72">
                       The HTML Basic Guide for beginners
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -291,7 +291,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={cssCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-14 w-72">
                       The CSS - Cascadin Style Sheet course for begginers
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -309,7 +309,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={tailwindCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-8 w-72">
                       The Tailwind Styling Course for beginners
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -326,7 +326,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={designCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-8 w-72">
                       Design Tips
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -354,7 +354,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={jsCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-20 w-72">
                       JavaScript Beginner's Guide 
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -371,7 +371,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={reactCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-20 w-72">
                       The Native React Course for beginners.
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -387,7 +387,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={nextCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-8 w-72">
                       Next.JS React Component Beginner's Guide
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">
@@ -405,7 +405,7 @@ export default function Courses1() {
 
                   <div className=" mr-6 ml-6">
                     <Image alt=" " src={phpCover} className="w-72 rounded-[25px]" />
-                    <div className=" text-xl text-start text-white pt-5 w-72">
+                    <div className=" text-xl text-start text-white pt-12 w-72">
                       The PHP
                     </div>
                     <div className=" text-sm text-start w-72 text-gray-500 pt-2">

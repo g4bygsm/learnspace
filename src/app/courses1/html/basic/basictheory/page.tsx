@@ -152,6 +152,26 @@ export default function Basictheory() {
                 </div>
               </div>
             </div>
+            <div className=" w-[500px] h-[350px] bg-white mt-10 mb-10 rounded-3xl text-center font-bold text-3xl">
+              <div className="pt-5 pb-5">IDs & Classes</div>
+              <div className="flex justify-center">
+                <div className="w-[480px] h-[250px] bg-gray-300 rounded-3xl mt-4">
+                  <div className=" text-lg font-light">
+                    In HTML, you can add on every element IDs or classes.
+                  </div>
+                  <div className=" font-light text-base flex m-2">
+                    <div className="font-bold">ID</div> = indentifier - it must
+                    be unique in the whole document and it's used for
+                    identifying element in the linked scripts or styles;
+                  </div>
+                  <div className=" font-light text-base flex m-2">
+                    <div className="font-bold">CLASS</div>- is a reference which
+                    you can use to multiply elements in the linked scripts or
+                    styles;
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -202,7 +222,6 @@ export default function Basictheory() {
 
                       <div>
                         <div className=" mt-5">
-                          {" "}
                           &lt;!DOCTYPE html&gt; - is the tag that is in every
                           html document and represents the type of document
                         </div>
